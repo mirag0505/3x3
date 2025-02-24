@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "module": "commonjs",
+      "strict": true,
+      "outDir": "dist",       // Папка, куда компилируется код
+      "esModuleInterop": true // Чтобы можно было делать import * as readline from 'readline'
+    },
+    "exclude": [
+      "node_modules"
+    ]
+  }
