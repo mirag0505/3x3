@@ -1,12 +1,26 @@
 {
-    "compilerOptions": {
-      "target": "ES2020",
-      "module": "commonjs",
-      "strict": true,
-      "outDir": "dist",       // Папка, куда компилируется код
-      "esModuleInterop": true // Чтобы можно было делать import * as readline from 'readline'
-    },
-    "exclude": [
-      "node_modules"
-    ]
-  }
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "strict": true,
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "sourceMap": true,           // Генерация source maps для отладки
+    "declaration": true,         // Генерация .d.ts файлов
+    "resolveJsonModule": true,   // Поддержка импорта JSON файлов
+    "forceConsistentCasingInFileNames": true, // Проверка регистра в именах файлов
+    "skipLibCheck": true,        // Пропуск проверки типов в файлах .d.ts
+    "baseUrl": ".",              // Базовый путь для импортов
+    "paths": {                   // Настройка путей для импортов
+      "@/*": ["src/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",               // Включаем все TypeScript файлы в src
+    "index.ts"                   // Включаем корневой файл
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

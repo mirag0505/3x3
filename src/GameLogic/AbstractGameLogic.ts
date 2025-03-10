@@ -1,12 +1,15 @@
+import { Any } from '../Core/Any';
+
 /**
  * Абстрактный класс, описывающий логику игры (GameLogic).
  */
-export abstract class AbstractGameLogic {
+export abstract class AbstractGameLogic extends Any {
     /**
      * Конструктор GameLogic.
      * Постусловие: создан GameLogic.
      */
     constructor() {
+      super();
       // Дополнительная инициализация при необходимости
     }
   
@@ -37,5 +40,5 @@ export abstract class AbstractGameLogic {
      * Постусловие: проверка на окончание игры.
      */
     public abstract checkGameOver(): void;
-  }
+}
   

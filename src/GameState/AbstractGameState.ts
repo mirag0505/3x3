@@ -1,12 +1,15 @@
+import { Any } from '../Core/Any';
+
 /**
  * Абстрактный класс, описывающий состояние (state) в игре.
  */
-export abstract class AbstractGameState {
+export abstract class AbstractGameState extends Any {
     /**
      * Конструктор GameState.
      * Постусловие: создана новая state-машина.
      */
     constructor() {
+      super();
       // Дополнительная инициализация, если нужна
     }
   
@@ -32,4 +35,4 @@ export abstract class AbstractGameState {
      * Постусловие: получаем текущий статус (string или, возможно, enum).
      */
     public abstract getCurrentState(): string;
-  }
+}
