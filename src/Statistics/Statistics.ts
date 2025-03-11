@@ -1,7 +1,9 @@
+import { AbstractStatistics } from './AbstractStatistics';
+
 /**
  * Класс для отслеживания статистики игры
  */
-export class Statistics {
+export class Statistics extends AbstractStatistics {
   private stepsCount: number = 0;
   private score: number = 0;
   private history: string[] = [];
@@ -10,6 +12,7 @@ export class Statistics {
    * Создает новый экземпляр статистики
    */
   constructor() {
+    super();
     this.stepsCount = 0;
     this.score = 0;
     this.history = [];
